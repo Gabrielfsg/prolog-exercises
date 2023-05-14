@@ -1,1 +1,1 @@
-# prolog-exercises
+# Praticando com O paradigma Lógico (Prolog).
