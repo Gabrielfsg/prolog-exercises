@@ -398,8 +398,8 @@ intervaloPrimosUm(V,Lista):- geraSeq(V,Seq), intervaloPrimosDois(Seq,Lista).
 intervaloPrimosDois([],[]).
 intervaloPrimosDois([X|T], Lista):- intervaloPrimosDois(T,NLista), (primo(X), Lista = [X|NLista] ; Lista = NLista), !.
 
-primo(1).
-primo(N):- N > 1, NN is N - 1, geraSeq(NN,L), verPrimo(N,L).
+primo(1):- !.
+primo(N):- N > 1, NN is N - 1, geraSeq(NN,L), verPrimo(N,L), !.
 
 verPrimo(N,[]).
 verPrimo(N,[X|T]):- Resto is N mod X, Resto \= 0, verPrimo(N,T).
