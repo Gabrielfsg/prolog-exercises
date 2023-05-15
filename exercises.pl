@@ -880,3 +880,26 @@ queens([C|Cs], Row0, [Col|Solution]) :-
   select(Col-Vars, [C|Cs], Board),
   arg(Row, Vars, Row-Row),
   queens(Board, Row, Solution).                                   
+
+
+/*
+matriz([
+        [1,2,3],
+        [4,5,6]
+        ]).
+
+
+somaPontasMat(Resultado):- matriz(M), somaPontas(M,Resultado).
+
+somaPontas([],[]).
+somaPontas([X|T],Resultados):-
+   somaPontas(T,NResultados),
+   somaPontasLista(X,R),
+   Resultados = [R|NResultados].
+   
+somaPontasLista([X|T], Soma):- Nsoma is X, soma([X|T], Nsoma,Soma).
+
+soma([X], V, Soma):- Soma is X + V.
+soma([X|T], V, Soma):- soma(T, V, Soma).
+
+*/
