@@ -1,3 +1,9 @@
+geraMatriz(0,C,[]):- !.
+geraMatriz(L,C,M):- NL is L - 1, geraMatriz(NL,C,NM), geraColunasMat(C,Ncoluna), M = [Ncoluna|NM], !.
+
+geraColunasMat(0,[]).
+geraColunasMat(C,Lista):- NC is C - 1, geraColunasMat(NC,NL), Lista = [0|NL], !.
+
 verificaSeTaNaLista(X,[X|_]).
 verificaSeTaNaLista(X,[_|T]):- verificaSeTaNaLista(X,T).
 
